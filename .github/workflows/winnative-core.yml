@@ -28,7 +28,7 @@ jobs:
 
       - name: Build
         run: |
-          "$NDK/ndk-build" -C "libretro/jni" APP_ABI="$ABI" APP_PLATFORM="$PLATFORM" -j"$(nproc)"
+          "$NDK/ndk-build" -C "libretro/jni" APP_ABI="$ABI" APP_PLATFORM="$PLATFORM" GLES3=1 -j"$(nproc)"
 
       - name: Collect
         run: |
